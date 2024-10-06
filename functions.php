@@ -141,7 +141,22 @@ function clark_scripts() {
 	wp_enqueue_style( 'clark-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'clark-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'clark-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	//Enqueue Styles
+
+	wp_enqueue_style( 'clark-font', "//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900", array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-bootstrap', get_template_directory_uri() . '/assets/css/open-iconic-bootstrap.min.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-animate', get_template_directory_uri() . '/assets/css/animate.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-owl-carosel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-theme-default', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-aos', get_template_directory_uri() . '/assets/css/aos.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-ionicons', get_template_directory_uri() . '/assets/css/ionicons.min.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-flaticon', get_template_directory_uri() . '/assets/css/flaticon.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-icomoon', get_template_directory_uri() . '/assets/css/icomoon.css', array(), _S_VERSION, 'all' );
+	wp_enqueue_style( 'clark-style-theme', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION, 'all' );
+
+
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
