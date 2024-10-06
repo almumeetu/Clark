@@ -141,6 +141,7 @@ function clark_scripts() {
 	wp_enqueue_style( 'clark-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'clark-style', 'rtl', 'replace' );
 
+
 	//Enqueue Styles
 
 	wp_enqueue_style( 'clark-font', "//fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900", array(), _S_VERSION, 'all' );
@@ -156,11 +157,25 @@ function clark_scripts() {
 	wp_enqueue_style( 'clark-style-theme', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION, 'all' );
 
 
+	// Enqueue Scripts
 
+	wp_enqueue_script( 'clark-jquery-migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-3.0.1.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-popper', get_template_directory_uri() . '/assets/js/popper.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-jquery-easing', get_template_directory_uri() . '/assets/js/jquery.easing.1.3.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-jquery-waypoints', get_template_directory_uri() . '/assets/js/jquery.waypoints.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-jquery-stellar', get_template_directory_uri() . '/assets/js/jquery.stellar.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-aos', get_template_directory_uri() . '/assets/js/aos.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-animate-number', get_template_directory_uri() . '/assets/js/jquery.animateNumber.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-scrollax', get_template_directory_uri() . '/assets/js/scrollax.min.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'clark-main-theme', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
 }
 add_action( 'wp_enqueue_scripts', 'clark_scripts' );
 
