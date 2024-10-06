@@ -157,7 +157,7 @@ function clark_scripts() {
 	wp_enqueue_style( 'clark-style-theme', get_template_directory_uri() . '/assets/css/style.css', array(), _S_VERSION, 'all' );
 
 
-	// Enqueue Scripts
+	// Enqueue Scriptss
 
 	wp_enqueue_script( 'clark-jquery-migrate', get_template_directory_uri() . '/assets/js/jquery-migrate-3.0.1.min.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'clark-popper', get_template_directory_uri() . '/assets/js/popper.min.js', array('jquery'), _S_VERSION, true );
