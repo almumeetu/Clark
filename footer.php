@@ -11,12 +11,12 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+	<footer id="colophon" class="site-footer  text-center" >
+		<div class=".ftco-footer">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clark' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'clark' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'clark' ), 'Saikat' );
 				?>
 			</a>
 			<span class="sep"> | </span>
@@ -24,7 +24,7 @@
 				/* translators: 1: Theme name, 2: Theme author. */
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clark' ), 'clark', '<a href="http://underscores.me/">Al Mumeetu Saikat</a>' );
 				?>
-		</div><!-- .site-info -->
+		</div><!-- ..ftco-footer -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
